@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+        <title>PUP Health Information Form - Student Information</title>
+        <link rel="stylesheet" href="form.css" />
+    </head>
+    <body>
+        <header class="header">
+            <img src="logo.png" alt="Logo">
+            <div class="header-text">
+                <h4>Republic of the Philippines</h1>
+                <h2>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h2>
+                <h3>Office of the Vice President for Administration</h3>
+                <h1>MEDICAL SERVICES DEPARTMENT</h2>
+            </div>
+            <div class="button-container">
+                <button class="landing-button" onclick="location.href='landingpage.html'">Home</button>
+            </div>
+        </header>
+        <main class='container'>
+            <div class='contents'>
+                <h3>PUP-HIFS-6-MEDS-020</h3>
+                <h3>Rev.2 March 22, 2022</h3>
+                <h1>HEALTH INFORMATION FORM FOR STUDENT</h1>
+                <form id="form_container" class="form_container" action="https://script.google.com/macros/s/AKfycbw0FzCCed2S7V8Fv2-ZdX4YVRQPVVZz8xflVI0gAmCs/dev" method="post">
+                    <div class="part1" id="part1">
+                        <h2>Part I. Student Information</h2>
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name"  required>
+                            </div>
+                            <div class="form_group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name"  required>
+                            </div>
+                            <div class="form_group">
+                                <label for="middle-name">Middle Name</label>
+                                <input type="text" id="middle-name" name="middle-name" placeholder="Middle Name"  required>
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="form_group fg_longerinput">
+                                <label for="branch_campus">PUP Branch or Campus</label>
+                                <select id="branch_campus" name="branch_campus" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="manila">Sta. Mesa, Manila</option>
+                                    <option value="quezon_city">Quezon City Branch</option>
+                                    <option value="san_juan">San Juan City Campus</option>
+                                    <option value="taguig">Taguig City Branch</option>
+                                    <option value="paranaque">Parañaque City Campus</option>
+                                    <option value="bataan">Bataan Branch</option>
+                                    <option value="stmaria">Sta. Maria, Bulacan Campus</option>
+                                    <option value="pulilan">Pulilan, Bulacan Campus</option>
+                                    <option value="cabiao">Cabiao, Nueva Ecija Campus</option>
+                                    <option value="lopez">Lopez, Quezon Branch</option>
+                                    <option value="mulanay">Mulanay, Quezon Branch</option>
+                                    <option value="general_luna">General Luna, Quezon (Mulanay Annex)</option>
+                                    <option value="unisan">Unisan, Quezon Branch</option>
+                                    <option value="ragay">Ragay, Camarines Sur Branch</option>
+                                    <option value="sto_tomas">Sto. Tomas, Batangas Branch</option>
+                                    <option value="maragondon">Maragondon, Cavite Branch</option>
+                                    <option value="alfonso">Alfonso, Cavite Branch (Maragondon Annex)</option>
+                                    <option value="bansud">Bansud, Oriental Mindoro Campus</option>
+                                    <option value="sablayan">Sablayan, Occidental Mindoro Campus</option>
+                                    <option value="binan">Biñan, Laguna Campus</option>
+                                    <option value="san_pedro">San Pedro, Laguna Campus</option>
+                                    <option value="sta_rosa">Sta. Rosa, Laguna Campus</option>
+                                    <option value="calauan">Calauan, Laguna Campus</option>
+                                    <option value="np">Non-PUPian</option>
+                                </select>
+                            </div>
+                            <div class="form_group fg_longerinput">
+                                <label for="college">College</label>
+                                <select id="college" name="college" required>
+                                    <!-- Options will be populated dynamically -->
+                                </select>
+                            </div>
+                            <div class="form_group fg_longerinput">
+                                <label for="course">Course</label>
+                                <select id="course" name="course" required>
+                                    <!-- Options will be populated dynamically -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" min="10" max="90" required>
+                            </div>
+                            <div class="form_group">
+                                <label for="sex">Sex</label>
+                                <select id="sex" name="sex" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label for="civil-status">Civil Status</label>
+                                <select id="civil-status" name="civil-status" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="divorced">Divorced</option>
+                                    <option value="widowed">Widowed</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label for="blood-type">Blood Type</label>
+                                <select id="blood-type" name="blood-type" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label for="school-year">School Year</label>
+                                <input type="text" id="school-year" name="school-year" pattern="20\d{2}-20\d{2}" placeholder="20XX-20XX"  required>
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="form_group fg_longerinput">
+                                <label for="home-address">Home Address</label>
+                                <input type="text" id="home-address" name="home-address"  required>
+                            </div>
+                            <div class="form_group fg_longerinput">
+                                <label for="email-address">Email Address</label>
+                                <input type="email" id="email-address" name="email-address" placeholder="example@gmail.com"  required>
+                            </div>
+                            
+                            <div class="form_group">
+                                <label for="student-number">PUP Student No.</label>
+                                <input type="text" id="student-number" name="student-number" pattern="\d{4}-\d{5}-MN-0" placeholder="20XX-XXXXX-MN-0"  required>
+                            </div>
+                        </div>
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="contact">Parent's Name / Guardian / Spouse</label>
+                                <input type="text" id="contact" name="contact">
+                            </div>
+                            
+                        </div>
+                        <div class="form_row">
+                            <div class="form_group fg_shorterinput">
+                                <label for="cellphone">Cellphone</label>
+                                <input type="text" id="cellphone" name="cellphone" pattern="09\d{9}" placeholder="09XXXXXXXXX">
+                            </div>
+                            <div class="form_group fg_shorterinput">
+                                <label for="landline">Landline</label>
+                                <input type="text" id="landline" name="landline" pattern="(\(02\) \d{3}-\d{4}|0\d{2} \d{3}-\d{4})" placeholder="(02) XXX-XXXX or 0XX XXX-XXXX">
+                            </div>
+                        </div>
+                        <div class="buttons_row">
+                            <div class="button_container next_button">
+                                <button type="button" class="button" id="showPart2">Next Section</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2" id="part2">
+                        <h2>Part II. Medical History</h2>
+                        <div class="first_group">
+                            <h4>1. Do you need medical attention or has known medical illness?</h4>
+                            <input type="radio" id="no_medical-attention" name="medical-attention" value="No" required onclick="toggleCheckboxes(false)">
+                            <label for="no_medical-attention">No</label>
+                            <input type="radio" id="yes_medical-attention" name="medical-attention" value="Yes" required onclick="toggleCheckboxes(true)">
+                            <label for="yes_medical-attention">Yes</label>
+                        </div>
+                        <h5>(Please check the following that apply and give more information as needed)</h5>
+                        <div class="checkbox_row">
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="asthma" name="illness" value="Asthma" disabled>
+                                <label for="asthma">Asthma</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="losscons" name="illness" value="Loss of Consciousness" disabled>
+                                <label for="losscons">Loss of Consciousness</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="eyedef" name="illness" value="Eye Disease/Defect" disabled>
+                                <label for="eyedef">Eye Disease/Defect</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="accident" name="illness" value="Accident Injuries" disabled>
+                                <label for="accident">Accident Injuries</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_row">
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="diabetes" name="illness" value="Diabetes" disabled>
+                                <label for="diabetes">Diabetes</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="heart" name="illness" value="Heart Disease" disabled>
+                                <label for="heart">Heart Disease</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="kidney" name="illness" value="Kidney Disease" disabled>
+                                <label for="kidney">Kidney Disease</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="tubpricomp" name="illness" value="Tubercolosis / Primary Complex" disabled>
+                                <label for="tubpricomp">Tubercolosis / Primary</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_row">
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="convepi" name="illness" value="Convulsion / Epilepsy" disabled>
+                                <label for="convepi">Convulsion / Epilepsy</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="hyperv" name="illness" value="Hyperventilation" disabled>
+                                <label for="hyperv">Hyperventilation </label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="hemop" name="illness" value="Hemophilia" disabled>
+                                <label for="hemop">Hemophilia</label>
+                            </div>
+                            <div class="four_columns">
+                                <label for="tubpricomp">Complex</label>
+                            </div>    
+                        </div>
+                        <div class="checkbox_row">
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="migraine" name="illness" value="Migraine" disabled>
+                                <label for="migraine">Migraine</label>
+                            </div>
+                            <div class="checkbox_group four_columns">
+                                <input type="checkbox" id="highbp" name="illness" value="High Blood Pressure" disabled>
+                                <label for="highbp">High Blood Pressure</label>
+                            </div> 
+                        </div>
+                        <br>
+                        <div class="form_group fill_in">
+                            <label for="other_illness">Others</label>
+                            <input type="text" id="other_illness" name="other_illness" placeholder="Please indicate other illness" disabled>
+                        </div>
+                        <br>
+                        <h4>2. Additional Information for Students with Medical Conditions:</h4>
+                        <h5>As a Parent/Guardian, I would like to declare that my child had history of allergies to the following:</h5>
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="food">Food</label>
+                                <input type="text" id="food" name="food" required>
+                            </div>
+                            <div class="form_group">
+                                <label for="allergies">No Known Allergies</label>
+                                <input type="text" id="allergies" name="allergies" required>
+                            </div>
+                        </div>
+                        <div class="checkbox_row five_columns">
+                            <div class="checkbox_group">
+                                <input type="checkbox" id="aspirin" name="medicine" value="Aspirin">
+                                <label for="aspirin">Aspirin</label>
+                            </div>
+                            <div class="checkbox_group">
+                                <input type="checkbox" id="ibuprofen" name="medicine" value="Ibuprofen">
+                                <label for="ibuprofen">Ibuprofen</label>
+                            </div>
+                            <div class="checkbox_group">
+                                <input type="checkbox" id="amoxicillin" name="medicine" value="Amoxicillin ">
+                                <label for="amoxicillin">Amoxicillin </label>
+                            </div>
+                            <div class="checkbox_group">
+                                <input type="checkbox" id="mefanamic" name="medicine" value="Mefenamic Acid ">
+                                <label for="mefanamic">Mefenamic Acid </label>
+                            </div>
+                            <div class="checkbox_group">
+                                <input type="checkbox" id="penicillin" name="medicine" value="Penicillin">
+                                <label for="penicillin">Penicillin</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form_group fill_in">
+                            <label for="other_medicines">Others</label>
+                            <input type="text" id="other_medicines" name="other_medicines" placeholder="Please indicate other medicines">
+                        </div>
+                        <div class="buttons_row">
+                            <div class="button_container prev_button">
+                                <button type="button" class="button" id="showPart1">Previous Section</button>
+                            </div>
+                            <div class="button_container next_button">
+                                <button type="button" class="button" id="showPart3">Next Section</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part3" id="part3">
+                        <h2>Part III. Personal History</h2>
+                        <div class="first_group">
+                            <h4>Cigarette Smoking</h4>
+                            <input type="radio" id="no_smoking" name="smoking" value="No" required>
+                            <label for="no_smoking">No</label>
+                            <input type="radio" id="yes_smoking" name="smoking" value="Yes" required>
+                            <label for="yes_smoking">Yes</label>
+                        </div>
+                        <div class="first_group">
+                            <h4>Alcohol Drinking</h4>
+                            <input type="radio" id="no_drinking" name="drinking" value="No" required>
+                            <label for="no_drinking">No</label>
+                            <input type="radio" id="yes_drinking" name="drinking" value="Yes" required>
+                            <label for="yes_drinking">Yes</label>
+                        </div>
+                        <br>
+                        <h2>Upload a Picture</h2>
+                        <div id="data"></div>
+                        <p>Please upload a 2x2 or passport size current colored ID photo</p>
+                        <div class="file-input-container">
+                            <label for="file-input-picture" class="custom-file-label">Choose a file</label>
+                            <input name="file1" type="file" id="file-input-picture" class="custom-file-input" accept="image/*" required>
+                            <span id="file-name-picture">No file chosen</span>
+                        </div>
+                        <br>
+                        <p class="agreement">I hereby state to the best of my knowledge, my answers to the above questions are complete and correct.</p>
+                        <p class="agreement">
+                            By affixing my signature (Parent/Guardian and Student), I agree to the Data Privacy Act of 2012 and its implementing
+                            rules and regulations and voluntarily giving my consent in the collection and processing of the student's name above
+                            its Personal Information in accordance with such as health assessment, treatment and/or research following research
+                            ethics guidelines for the improvements of healthcare services. This consent will remain in full force until I revoke it in
+                            writing. I also understand the PUP MSD will not be liable to any untoward incident this may arise due to the
+                            temporary deferral of the physical examination and chest x-ray.
+                        </p>
+                        <br>
+                        <div class="signature-row">
+                            <div class="signature">
+                                <div class="file-input-container">
+                                    <label for="file-input-signpar" class="custom-file-label">Choose a file</label>
+                                    <input name="file2" type="file" id="file-input-signpar" class="custom-file-input" accept="image/*" required>
+                                    <span id="file-name-signpar">No file chosen</span>
+                                </div>
+                                <h2>Signature of Parent/Guardian</h2>
+                            </div>
+                            <div class="signature">
+                                <div class="file-input-container">
+                                    <label for="file-input-signstud" class="custom-file-label">Choose a file</label>
+                                    <input name="file3" type="file" id="file-input-signstud" class="custom-file-input" accept="image/*" required>
+                                    <span id="file-name-signstud">No file chosen</span>
+                                </div>
+                                <h2>Signature of Student</h2>
+                            </div>
+                        </div>
+                        <p class="agreement centered">Note: Both Parent/Guardian and Student will sign if Student is below 18 years of age.</p>
+                        <div class="buttons_row">
+                            <div class="button_container prev_button">
+                                <button type="button" class="button" id="showPart2-2">Previous Section</button>
+                            </div>
+                        </div>
+                        <div class="submit_button_container">
+                            <button type="submit" class="button" onclick="submitForm()">SUBMIT FORM</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="note">Due to Covid-19 pandemic, physical examination, and chest x-ray submission as requirement for enrollment is temporary deferred, however, you will be asked to comply with this upon resumption of your face-to-face classes.</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-base">
+                    <div class="rectangle3"></div>
+                    <div class="circle current_section" id="circle1"></div>
+                    <div class="rectangle1" id="rectangle1"></div>
+                    <div class="circle" id="circle2"></div>
+                    <div class="rectangle2" id="rectangle2"></div>
+                    <div class="circle" id="circle3"></div>
+                    <div class="rectangle4"></div>
+                </div>
+                <div class="progress-overlay">
+                    <h1>Student Information</h1>
+                    <h1>Medical and Personal History</h1>
+                    <h1>Submission</h1>
+                </div>
+            </div>
+        </main>
+        <script src="form.js"></script>
+        <script>
+            function errorHandler(evt) {
+                switch(evt.target.error.code) {
+                    case evt.target.error.NOT_FOUND_ERR:
+                        alert('File Not Found!');
+                        break;
+                    case evt.target.error.NOT_READABLE_ERR:
+                        alert('File is not readable');
+                        break;
+                    case evt.target.error.ABORT_ERR:
+                        break;
+                    default:
+                        alert('An error occurred reading this file.');
+                }
+            }
+
+            function handleFileSelect(evt, inputId) {
+                var reader = new FileReader();
+                var file = evt.target.files[0];
+    
+                reader.fileName = file.name;
+                reader.onerror = errorHandler;
+                reader.onloadstart = function(e) {
+                };
+                reader.onload = function(e) {
+                    let html = '<input type="hidden" name="data_' + inputId + '" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+                    html += '<input type="hidden" name="mimetype_' + inputId + '" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+                    html += '<input type="hidden" name="filename_' + inputId + '" value="' + e.target.fileName + '" >';
+                    $("#data").append(html);
+    
+                };
+                reader.readAsDataURL(file);
+            }
+    
+            document.getElementById('file-input-picture').addEventListener('change', function(evt) {
+                handleFileSelect(evt,'file1');
+            }, false);
+    
+            document.getElementById('file-input-signpar').addEventListener('change', function(evt) {
+                handleFileSelect(evt,'file2');
+            }, false);
+
+            document.getElementById('file-input-signstud').addEventListener('change', function(evt) {
+                handleFileSelect(evt,'file3');
+            }, false);
+    
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById("file-input-picture").click();
+                document.getElementById("file-input-signpar").click();
+                document.getElementById("file-input-signstud").click();
+            }, false);
+        </script>
+        
+    </body>
+</html>
